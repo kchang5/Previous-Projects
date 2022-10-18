@@ -20,6 +20,8 @@ IntList::~IntList() {
 	}
 }
 
+// Member function adds a new node to the front of the list.
+
 void IntList::push_front(int value) {
 	IntNode* newNode = new IntNode(value);
 	if (dummyHead->next == nullptr) {
@@ -36,6 +38,7 @@ void IntList::push_front(int value) {
 		temp->prev = newNode;
 	}
 }
+// Member function removes the node in the front of the list.
 
 void IntList::pop_front() {
 	if (dummyHead->next != nullptr) {
@@ -53,6 +56,8 @@ void IntList::pop_front() {
 		}
 	}
 }
+
+// Member function adds a new node to the end of the list
 
 void IntList::push_back(int value) {
 	IntNode* newNode = new IntNode(value);
@@ -86,6 +91,7 @@ void IntList::pop_back() {
 		}
 	}
 }
+//returns next value of curr value is empty
 
 bool IntList::empty() const {
 	return dummyHead->next == nullptr;
